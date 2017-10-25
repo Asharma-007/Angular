@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app ="myApp">
+<head>
+<meta charset="ISO-8859-1">
+<title>simple Expense Calculator page</title>
+ <!-- Bootstrap & JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://bootswatch.com/flatly/bootstrap.min.css"> -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- Angular -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+   
+   
+<!-- Main App -->
+<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src= "MainCtrl.js"></script>
+
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-navbar">
+				<a class="navbar-brand" href="#">Expense Calculator</a>
+
+			</div>
+		</div>
+	</nav>
+
+
+	<div ng-controller = "MainCtrl" class="container">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Name</th>
+					<th>Amount</th>
+					<th>Price</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tr>
+				<td ng-bind="products.length+1"></td>
+				<td><input type="text" class="form-control" required /></td>
+				<td><input type="text" class="form-control" required /></td>
+				<td><input type="text" class="form-control" required /></td>
+				<td><button class="btn -btn default" type="submit">Add</button></td>
+			</tr>
+			<tr>
+                <th colspan="6">Total</th>
+                <th id="right"><span ></span><span> Rupay.</span></th>
+              </tr> 
+		</table>
+		<!-- <label for="fname">First Name</label> <input type="text" id="UserName"
+			name="UserName" placeholder="Your UserName is.."> <label
+			for="lname">Last Name</label> <input type="text" id="password"
+			name="password" placeholder="Your Password is.."> <input
+			type="submit" value="Submit" onclick="details()"> -->
+
+	</div>
+</body>
+</html>
